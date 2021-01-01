@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:vfs": "node build-vfs.js -d src/assets-src/fonts -o src/app/modules/create-pdf",
     "test": "jest",
     "lint": "ng lint"
   },
