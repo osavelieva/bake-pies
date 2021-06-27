@@ -19,8 +19,8 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@environments/*": ["src/environments/*"],
-      "@modules/*": ["src/app/modules/*"],
-      "@services/*": ["src/app/services/*"]
+      "@services/*": ["src/app/services/*"],
+      "@create-pdf": ["src/app/modules/create-pdf"]
     }
   },
   "angularCompilerOptions": {

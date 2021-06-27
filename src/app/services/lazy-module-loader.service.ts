@@ -1,10 +1,10 @@
-import { Compiler, Injectable, Injector, Type } from '@angular/core';
-import { from, Observable } from 'rxjs';
+import { Compiler, Injectable, Injector } from '@angular/core';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LazyLoaderService {
+export class LazyModuleLoaderService {
   constructor(
     private readonly compiler: Compiler,
     private readonly injector: Injector

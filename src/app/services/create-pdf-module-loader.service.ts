@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
-import { LazyLoaderService } from './lazy-loader.service';
+import { LazyModuleLoaderService } from './lazy-module-loader.service';
 import { Observable } from 'rxjs';
-import { CreatePdfModule } from '@modules/create-pdf/create-pdf.module';
+import { CreatePdfModule } from '@create-pdf';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CreatePdfModuleLoaderService {
-  constructor(private readonly lazyLoaderService: LazyLoaderService) {}
+  constructor(
+    private readonly lazyModuleLoaderService: LazyModuleLoaderService
+  ) {}
 
   loadModule(): Observable<CreatePdfModule> {
+    // TODO fix path
     const path = () => import('../modules/create-pdf/create-pdf.module');
 
-    return this.lazyLoaderService.loadModule(
+    return this.lazyModuleLoaderService.loadModule(
       path
     ) as Observable<CreatePdfModule>;
   }

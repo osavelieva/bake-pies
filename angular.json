@@ -24,8 +24,7 @@
         "@schematics/angular:interceptor": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -110,9 +109,21 @@
           "options": {
             "browserTarget": "bake-pies:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "bake-pies"
+  "defaultProject": "bake-pies",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

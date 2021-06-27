@@ -8,6 +8,6 @@ import { TCreatedPdf } from 'pdfmake/build/pdfmake';
 })
 export class CreatePdfModule {
   createDocument(): Observable<TCreatedPdf> {
-    return of(({} as unknown) as TCreatedPdf);
+    return of({} as unknown as TCreatedPdf);
   }
 }
